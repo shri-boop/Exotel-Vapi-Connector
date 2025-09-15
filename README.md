@@ -7,14 +7,14 @@
 This repository provides a comprehensive, production-tested solution for integrating Vapi AI voice assistants with Exotel's telephony infrastructure. The integration supports multiple calling patterns with enterprise-grade reliability.
 
 ### **Key Features:**
-- 🎤 **Complete Integration**: FQDN + BYO setup required for full functionality
+- 🎤 **Complete Integration**: FQDN + BYO setup for full functionality
 - 📞 **Bidirectional Calling**: Inbound (FQDN) + Outbound (BYO) combined solution
 - 🔄 **Dual SIP Configuration**: Exotel trunk + Vapi BYO trunk working together
 - 🎙️ **Call Recording**: Full conversation recording capabilities
 - 📊 **Flow Integration**: Connect calls to Exotel Apps/Flows
 - 🔒 **Production Security**: Environment-based credential management
 - 🌐 **Multiple Transport**: TCP, TLS support for SIP communication
-- ⚠️ **WSS Integration**: WebSocket streaming (Work in Progress - Media issues)
+- 🤖 **Multi-Assistant**: Support for multiple AI assistants on different numbers
 
 ## ✅ Proven Results
 
@@ -32,8 +32,8 @@ This repository provides a comprehensive, production-tested solution for integra
 Before starting, ensure you have access to:
 
 1. **Exotel Account** with vSIP API access
-   - 📋 **Get API credentials**: https://my.in.exotel.com/apisettings/site#api-credentials
-   - 📞 **Virtual Numbers**: https://my.in.exotel.com/numbers
+   - 📋 **Get API credentials**: https://my.exotel.com/apisettings/site#api-credentials
+   - 📞 **Virtual Numbers**: https://my.exotel.com/numbers
    - 🏢 **Account SID, API Key, Auth Token** required
 
 2. **Vapi Account** with AI assistant
@@ -45,9 +45,49 @@ Before starting, ensure you have access to:
 ### Installation
 
 ```bash
-git clone <your-repository-url>
+git clone https://github.com/your-username/vapi-exotel-integration.git
 cd vapi-exotel-integration
 ```
+
+### Configuration
+
+1. **Copy environment template:**
+   ```bash
+   cp env.template .env
+   ```
+
+2. **Update `.env` with your credentials:**
+   ```bash
+   # Edit .env file with your actual credentials
+   nano .env
+   ```
+
+3. **Validate configuration:**
+   ```bash
+   python3 production_integration_script.py --validate-config
+   ```
+
+### Setup Options
+
+#### **Option 1: Complete Setup (Recommended)**
+```bash
+python3 production_integration_script.py --setup-all
+```
+
+#### **Option 2: FQDN Integration Only**
+```bash
+python3 production_integration_script.py --setup-fqdn-only
+```
+
+#### **Option 3: Manual Setup**
+Follow the detailed guide in [`PRODUCTION_SETUP_GUIDE.md`](./PRODUCTION_SETUP_GUIDE.md)
+
+## 📋 Complete Documentation
+
+- **[Production Setup Guide](./PRODUCTION_SETUP_GUIDE.md)** - Detailed step-by-step setup
+- **[API Reference](./PRODUCTION_SETUP_GUIDE.md#-complete-api-reference)** - All APIs used
+- **[Troubleshooting](./PRODUCTION_SETUP_GUIDE.md#-monitoring--troubleshooting)** - Common issues and solutions
+- **[Architecture](./PRODUCTION_SETUP_GUIDE.md#-technical-architecture)** - Technical details
 
 ### Configuration
 
