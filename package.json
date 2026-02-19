@@ -5,13 +5,13 @@
   "main": "src/server.js",
   "type": "module",
   "scripts": {
-    "start": "node lib/vapi-exotel-wss-solution.js",
-    "bridge": "node lib/simple-working-bridge.js",
-    "trunk": "python3 scripts/vapi-exotel-tcp-trunk-setup.py",
-    "test": "node examples/test-integration.js",
-    "setup": "node scripts/setup-integration.js",
-    "dev": "nodemon lib/vapi-exotel-wss-solution.js"
-  },
+  "start": "node src/server.js",
+  "bridge": "node src/bridge/simple-working-bridge.js",
+  "trunk": "python3 scripts/vapi-exotel-tcp-trunk-setup.py",
+  "test": "node examples/test-integration.js",
+  "setup": "node scripts/setup-integration.js",
+  "dev": "nodemon src/server.js"
+},
   "keywords": [
     "vapi",
     "exotel",
