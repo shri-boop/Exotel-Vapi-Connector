@@ -2,7 +2,7 @@
   "name": "vapi-exotel-integration",
   "version": "1.0.0",
   "description": "Production-ready integration between Vapi AI voice assistants and Exotel telephony infrastructure",
-  "main": "lib/vapi-exotel-wss-solution.js",
+  "main": "src/server.js",
   "type": "module",
   "scripts": {
     "start": "node lib/vapi-exotel-wss-solution.js",
